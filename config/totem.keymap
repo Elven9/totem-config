@@ -222,10 +222,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp GRAVE  &kp UNDER       &kp UP          &kp PLUS         &kp LBRC    &kp RBRC    &kp N7        &kp N8        &kp N9        &kp EQUAL
-           &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LBKT    &kp RBKT    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS
-&kp TILDE  &trans     &kp HOME        &trans          &kp END          &kp LPAR    &kp RPAR    &kp NUMBER_1  &kp N2        &kp N3        &kp KP_MULTIPLY  &trans
-                                      &trans          &trans           &trans      &kp PERIOD  &kp N0        &kp KP_COMMA
+           &kp GRAVE  &kp UNDER       &kp UP          &kp PLUS         &kp LBRC    &kp RBRC    &kp N7        &kp N8  &kp N9        &kp EQUAL
+           &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LBKT    &kp RBKT    &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp MINUS
+&kp TILDE  &trans     &kp HOME        &trans          &kp END          &kp LPAR    &kp RPAR    &kp NUMBER_1  &kp N2  &kp N3        &kp KP_MULTIPLY  &trans
+                                      &trans          &trans           &trans      &kp PERIOD  &kp N0        &mo 4
             >;
         };
 
@@ -251,7 +251,7 @@
         &kp EXCL            &kp AT  &kp HASH  &kp DLLR       &kp PRCNT               &kp CARET     &kp AMPS      &kp ASTERISK  &kp SQT     &kp DQT
         &trans              &trans  &trans    &trans         &trans                  &trans        &trans        &trans        &trans      &kp RA(O)
 &trans  &kp LC(LA(DELETE))  &trans  &trans    &kp C_BRI_DEC  &kp C_BRIGHTNESS_INC    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV    &kp C_NEXT  &kp BSLH   &trans
-                                    &trans    &trans         &mo 3                   &trans        &trans        &trans
+                                    &mo 3     &trans         &trans                  &trans        &trans        &trans
             >;
         };
 
@@ -274,10 +274,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &bt BT_DISC 0  &bt BT_SEL 0    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader  &trans      &trans        &bt BT_DISC 1  &bt BT_SEL 1    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &trans      &trans        &bt BT_SEL 2   &bt BT_SEL 2    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans         &trans          &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
+        &trans  &trans  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        sys_layer {
+            bindings = <
+                &out OUT_TOG  &trans  &trans  &trans  &bt BT_SEL 0    &bt BT_DISC 0  &trans  &trans  &trans  &trans
+                &trans        &trans  &trans  &trans  &bt BT_SEL 1    &bt BT_DISC 1  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans        &trans  &trans  &trans  &bt BT_SEL 2    &bt BT_DISC 2  &trans  &trans  &trans  &trans  &trans
+                                      &trans  &trans  &trans          &trans         &trans  &trans
             >;
         };
 
